@@ -1,0 +1,5 @@
+<Leader> cc - Comment current line(s)
+<Leader> cm - Block comment current lines
+<Leader> cy - Copy and comment current lines
+<Leader> cA - Append comment to current line
+<Leader> cu - Uncomment current line(s)

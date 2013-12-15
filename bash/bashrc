@@ -1,0 +1,31 @@
+export TERM=rxvt-unicode-256color
+source ~/dotfiles/bash/scripts/git-prompt.sh
+source ~/dotfiles/bash/colors
+
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+function set_ps1()
+{
+	export PS1="\[$IGreen\]\[$PWD/\] \u@\H\[$(__git_ps1)\] \[$Color_Off\]\n> "
+}
+function pastebin()
+{
+	curl -sF 'sprunge=<-' 'http://sprunge.us' <"${1:-/dev/stdin}"
+}
+
+
+PROMPT_COMMAND=set_ps1
+
+
+alias flux="xflux -l 42.3333 -g -83.0333"
+alias scrot="~/dotfiles/bash/scripts/scrot.sh"
+alias cls="clear"
+alias copy="xclip -i"
+alias paste="xclip -o"
+alias irssi="screen -R irssi irssi"
+alias ls='ls -h --color=auto --file-type --group-directories-first'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias thetime='date +"It is %r on %A, %B %e"'
+alias whoami='echo "You are" $USER'
+alias whatshell='echo "You are using" $SHELL'

@@ -1,0 +1,24 @@
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+nnoremap <C-P> :call PhpDocSingle()<CR> 
+vnoremap <C-P> :call PhpDocRange()<CR>
+set shiftwidth=2
+set tabstop=2
+set smartindent
+set mouse=a
+set cindent
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+colorscheme pablo
+set laststatus=2
+set statusline+=%F
+syntax on
+set number
+autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
+autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
+set wrap
+set linebreak
+set nolist  " list disables linebreak
+set textwidth=0
+set wrapmargin=0
+set formatoptions+=l
+hi StatusLine ctermbg=none
