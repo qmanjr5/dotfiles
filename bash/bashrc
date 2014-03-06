@@ -16,14 +16,14 @@ function pastebin()
 
 PROMPT_COMMAND=set_ps1
 
-
+alias echo="echo -ne"
 alias flux="xflux -l 42.3333 -g -83.0333"
 alias scrot="~/dotfiles/bash/scripts/scrot.sh"
 alias cls="clear"
 alias copy="xclip -i"
 alias paste="xclip -o"
 alias irssi="screen -R irssi irssi"
-alias ls='ls -h --color=auto --file-type --group-directories-first'
+alias ls='ls -h --color=no --file-type '
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias thetime='date +"It is %r on %A, %B %e"'

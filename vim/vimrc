@@ -1,6 +1,4 @@
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR>
+execute pathogen#infect()
 set shiftwidth=2
 set tabstop=2
 set smartindent
@@ -13,8 +11,6 @@ set laststatus=2
 set statusline+=%F
 syntax on
 set number
-autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
-autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
 set wrap
 set linebreak
 set nolist  " list disables linebreak

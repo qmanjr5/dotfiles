@@ -229,21 +229,21 @@ abstracts = {
 formats = {
   "fe-common/core" = {
     timestamp = "{$Z}";
-    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-12]2}}$1";
-    own_msg = "{ownmsgnick {ownnick $[-12]0$2}}$1";
-    own_msg_channel = "{ownmsgnick {ownnick $[-12]0$3}{msgchannel $1}}$2";
-    pubmsg_me = "{pubmsgmenick {menick $[-12]0}$2}$1";
-    pubmsg_me_channel = "{pubmsgmenick {menick $[-12]0$3}{msgchannel $1}}$2";
-    pubmsg_hilight = "{pubmsghinick $0 $0 $[-12]1$3%n}$2";
-    pubmsg_hilight_channel = "{pubmsghinick $0 $[-12]1$4{msgchannel $2}}$3";
-    pubmsg = "{pubmsgnick $2 {pubnick \0030%C$0}}$1";
-    pubmsg_channel = "{pubmsgnick {pubnick $[-12]0$2}}$1";
+    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[15]2}}$1";
+    own_msg = "{ownmsgnick {ownnick $[15]0$2}}$1";
+    own_msg_channel = "{ownmsgnick {ownnick $[15]0$3}{msgchannel $1}}$2";
+    pubmsg_me = "{pubmsgmenick {menick $[15]0}$2}$1";
+    pubmsg_me_channel = "{pubmsgmenick {menick $[15]0$3}{msgchannel $1}}$2";
+    pubmsg_hilight = "{pubmsghinick $0 $0 $[15]1$3%n}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $[15]1$4{msgchannel $2}}$3";
+    pubmsg = "{pubmsgnick {pubnick $[15]0$2}}$1";
+    pubmsg_channel = "{pubmsgnick {pubnick $[15]0$2}}$1";
     join = "{channick_hilight $0} joined";
     part = "{channick $0} left {reason $3}";
     quit = "{channick $0} quit";
     quit_once = "{channick $0} quit";
     msg_private = "{privmsg $[-12]0}$2";
-    msg_private_query = "{privmsgnick $[-12]0}$2";
+    msg_private_query = "{privmsgnick $[15]0}$2";
   };
   "fe-common/irc" = {
     ctcp_reply = "{ctcp CTCP {hilight $0} reply from {nick $1}: $2 }";
@@ -255,4 +255,7 @@ formats = {
     action_public = "{pubaction $[-13]0}$1";
   };
   "fe-common/irc/notifylist" = { notify_join = "{nick $0} joined"; };
+  "Irssi::Script::nickcolor" = {
+    pubmsg_hilight = "{pubmsghinick $0 $0 $[15]1$3%n}$2";
+  };
 };

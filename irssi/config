@@ -97,6 +97,7 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   "irc.freenode.net" = { type = "IRC"; };
+  btn = { type = "IRC"; host = "irc.broadcasthe.net"; };
 };
 
 aliases = {
@@ -265,13 +266,6 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
 settings = {
@@ -290,20 +284,13 @@ settings = {
     theme = "kairos";
     use_msgs_window = "no";
     window_check_level_first = "no";
-    window_default_level = "publics notices snotes ctcps actions modes topics wallops nicks";
+    window_default_level = "publics notices snotes ctcps actions modes topics wallops nicks joins parts quits";
     activity_hide_targets = "#defocus &bitlbee &facebook";
     activity_msg_level = "";
   };
 };
 logs = { };
-ignores = (
-  { level = "JOINS PARTS QUITS"; channels = ( "##php" ); },
-  { mask = "joins"; level = "PARTS"; },
-  { mask = "parts,"; level = "QUITS"; },
-  { level = "JOINS PARTS QUITS"; channels = ( "#phpc" ); },
-  { mask = "help"; level = "ALL"; },
-  { level = "JOINS PARTS QUITS"; }
-);
+ignores = ( );
 hilights = (
   { text = "qmanjr5"; nick = "yes"; word = "yes"; },
   { text = "kairos"; nick = "yes"; word = "yes"; }
