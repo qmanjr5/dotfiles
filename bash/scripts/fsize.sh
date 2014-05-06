@@ -1,0 +1,1 @@
+printf '\33]50;%s%d\007' "xft:Ubuntu Mono:pixelsize=" $1

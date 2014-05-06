@@ -269,11 +269,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Unknown";
-    user_name = "quentin/bouncer.evan.pro";
-    nick = "kairos";
-  };
+  core = { real_name = "Unknown"; user_name = "kairos"; nick = "kairos"; };
   "fe-text" = { actlist_sort = "refnum"; actlist_names = "no"; };
   "perl/core/scripts" = {
     awl_display_key = "<$Q|$H$C$S>";
@@ -283,7 +279,6 @@ settings = {
     neat_left_messages = "yes";
     neat_maxlength = "15";
     awl_display_key_active = "%G<$Q|$H$C$S>%n";
-    awl_hide_empty = "0";
   };
   "fe-common/core" = {
     theme = "kairos";

@@ -24,8 +24,7 @@ client.focused_inactive	#262626	#380E0E #000 #B82121
 new_window 1pixel
 
 #Volume keys
-bindsym XF86AudioMute amixer set Headphone off
-bindsym XF86AudioLowerVolume amixer set Headphone off
+bindcode Control+49 exec amixer set Capture toggle
 bar {
 		position bottom
 		colors

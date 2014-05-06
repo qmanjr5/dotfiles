@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/kairos/Ice/config'
 let g:netrw_dirhist_2='/home/kairos/.ncmpcpp'
 let g:netrw_dirhist_3='/home/kairos/.moc'
 let g:netrw_dirhist_4='/etc/apache2/sites-enabled'
 let g:netrw_dirhist_5='/etc/apache2/conf.d'
+let g:netrw_dirhist_6='/home/kairos/streams'

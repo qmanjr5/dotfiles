@@ -1,12 +1,12 @@
 export TERM=rxvt-unicode-256color
 source ~/dotfiles/bash/scripts/git-prompt.sh
 source ~/dotfiles/bash/colors
-
+export TZ='America/Toronto'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 function set_ps1()
 {
-	export PS1="\[$IGreen\]\[$PWD/\] \u@\H\[$(__git_ps1)\] \[$Color_Off\]\n> "
+    export PS1="\[$Red\]<\[$Blue\]\[$PWD/\]\[$Red\]> \[$(__git_ps1)\] \n——> "
 }
 function pastebin()
 {
@@ -27,5 +27,5 @@ alias ls='ls -h --color=no --file-type '
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias thetime='date +"It is %r on %A, %B %e"'
-alias whoami='echo "You are" $USER'
+alias whoami='echo "You are" $USER "\n"'
 alias whatshell='echo "You are using" $SHELL'
