@@ -1,7 +1,7 @@
-export TERM=rxvt-unicode-256color
-source ~/dotfiles/bash/scripts/git-prompt.sh
-source ~/dotfiles/bash/colors
+source ~/dots/bash/scripts/git-prompt.sh
+source ~/dots/bash/colors
 export TZ='America/Toronto'
+export EDITOR='vim'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 function set_ps1()
@@ -18,7 +18,7 @@ PROMPT_COMMAND=set_ps1
 
 alias echo="echo -ne"
 alias flux="xflux -l 42.3333 -g -83.0333"
-alias scrot="~/dotfiles/bash/scripts/scrot.sh"
+alias scrot="~/dots/bash/scripts/scrot.sh"
 alias cls="clear"
 alias copy="xclip -i"
 alias paste="xclip -o"

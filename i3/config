@@ -10,31 +10,66 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 ####Additives######
+for_window [class="message"] floating enable
 #colors!
 #Border = Title bar
 #Background = outline
-#class									border	backgr.	text		indicator
-client.focused 					#262626 #B82121 #000 #B82121
-client.focused_inactive	#262626	#380E0E #000 #B82121
-#client.unfocused			  #000 #000 #000 #000
-#client.urgent					#000 #000	#000 #000
-
-
+#class                      Border   backgr.text    indicator
+client.focused              #262626 #B82121 #000    #B82121
+client.focused_inactive     #262626 #F3E7c6 #000    #B82121
+client.unfocused            #F3E7c6 #F3E7c6 #000    #000
+client.urgent              #000    #000    #000    #000
+rename workspace 11 to |│|
+rename workspace 1 to 0001
+rename workspace 2 to 0010
+rename workspace 3 to 0011
+rename workspace 4 to 0100
+rename workspace 5 to 0101
+rename workspace 6 to 0110
+rename workspace 7 to 0111
+rename workspace 8 to 1000
+rename workspace 9 to 1001
+rename workspace 10 to 1010
 #Other stuff
+# switch to workspace
+bindsym $mod+1 workspace 0001
+bindsym $mod+2 workspace 0010
+bindsym $mod+3 workspace 0011
+bindsym $mod+4 workspace 0100
+bindsym $mod+5 workspace 0101
+bindsym $mod+6 workspace 0110
+bindsym $mod+7 workspace 0111
+bindsym $mod+8 workspace 1000
+bindsym $mod+9 workspace 1001
+bindsym $mod+0 workspace 1010
+bindsym $mod+grave workspace |│|
+
+# move focused container to workspace
+bindsym $mod+Shift+grave move workspace |│|
+bindsym $mod+Shift+exclam move workspace 0001
+bindsym $mod+Shift+at move workspace 0010
+bindsym $mod+Shift+numbersign move workspace 0011
+bindsym $mod+Shift+dollar move workspace 0100
+bindsym $mod+Shift+percent move workspace 0101
+bindsym $mod+Shift+asciicircum move workspace 0110
+bindsym $mod+Shift+ampersand move workspace 0111
+bindsym $mod+Shift+asterisk move workspace 1000
+bindsym $mod+Shift+parenleft move workspace 1001
+bindsym $mod+Shift+parenright move workspace 1010
+
+
 new_window 1pixel
 
-#Volume keys
-bindcode Control+49 exec amixer set Capture toggle
 bar {
-		position bottom
-		colors
-		{
-				background #000
-				#Colorclass 				border	background	text
-				focused_workspace		#ffffff #000000     #ffffff
-				active_workspace		#4c7899 #4c7899 		#000000
-				inactive_workspace 	#2a2a2a #2a2a2a 		#dfdfdf
-		}
+        position bottom
+        colors
+        {
+                background #F3E7c6
+                #Colorclass             border  background  text
+                focused_workspace       #906861 #906861    #000
+                active_workspace        #F3E7c6 #F3E7c6    #000
+                inactive_workspace      #F3E7c6 #F3E7c6    #000
+        }
 }
 set $mod Mod4
 
@@ -45,7 +80,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+Bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -103,29 +138,6 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindcode $mod+d focus child
 
-# switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-
-# move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1
-bindsym $mod+Shift+at move workspace 2
-bindsym $mod+Shift+numbersign move workspace 3
-bindsym $mod+Shift+dollar move workspace 4
-bindsym $mod+Shift+percent move workspace 5
-bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8
-bindsym $mod+Shift+parenleft move workspace 9
-bindsym $mod+Shift+parenright move workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -142,34 +154,34 @@ mode "resize" {
 # when pressing left, the window is resized so that it has
 # more space on its left
 
-	bindsym j resize shrink left 10 px or 10 ppt
-		bindsym Shift+J resize grow   left 10 px or 10 ppt
+    bindsym j resize shrink left 10 px or 10 ppt
+        bindsym Shift+J resize grow   left 10 px or 10 ppt
 
-		bindsym k resize shrink down 10 px or 10 ppt
-		bindsym Shift+K resize grow   down 10 px or 10 ppt
+        bindsym k resize shrink down 10 px or 10 ppt
+        bindsym Shift+K resize grow   down 10 px or 10 ppt
 
-		bindsym l resize shrink up 10 px or 10 ppt
-		bindsym Shift+L resize grow   up 10 px or 10 ppt
+        bindsym l resize shrink up 10 px or 10 ppt
+        bindsym Shift+L resize grow   up 10 px or 10 ppt
 
-		bindsym semicolon resize shrink right 10 px or 10 ppt
-		bindsym Shift+colon resize grow   right 10 px or 10 ppt
+        bindsym semicolon resize shrink right 10 px or 10 ppt
+        bindsym Shift+colon resize grow   right 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-		bindsym Left resize shrink left 10 px or 10 ppt
-		bindsym Shift+Left resize grow   left 10 px or 10 ppt
+        bindsym Left resize shrink left 10 px or 10 ppt
+        bindsym Shift+Left resize grow   left 10 px or 10 ppt
 
-		bindsym Down resize shrink down 10 px or 10 ppt
-		bindsym Shift+Down resize grow   down 10 px or 10 ppt
+        bindsym Down resize shrink down 10 px or 10 ppt
+        bindsym Shift+Down resize grow   down 10 px or 10 ppt
 
-		bindsym Up resize shrink up 10 px or 10 ppt
-		bindsym Shift+Up resize grow   up 10 px or 10 ppt
+        bindsym Up resize shrink up 10 px or 10 ppt
+        bindsym Shift+Up resize grow   up 10 px or 10 ppt
 
-		bindsym Right resize shrink right 10 px or 10 ppt
-		bindsym Shift+Right resize grow   right 10 px or 10 ppt
+        bindsym Right resize shrink right 10 px or 10 ppt
+        bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
