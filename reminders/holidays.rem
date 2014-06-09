@@ -1,0 +1,105 @@
+# Handy constants/function for specifing week of month...
+SET  Week_1      1
+SET  Week_2      8
+SET  Week_3     15
+SET  Week_4     22
+FSET _last(mo)      "1 " + MON((mo%12)+1)+" --7"
+SET Sunday    0
+SET Monday    1
+SET Tuesday   2
+SET Wednesday 3
+SET Thursday  4
+SET Friday    5
+SET Saturday  6
+
+SET Sun 0
+SET Mon 1
+SET Tue 2
+SET Wed 3
+SET Thu 4
+SET Fri 5
+SET Sat 6
+
+#########################################
+# Symbolic constants for month names... #
+#########################################
+
+SET Jan 1
+SET Feb 2
+SET Mar 3
+SET Apr 4
+SET May 5
+SET Jun 6
+SET Jul 7
+SET Aug 8
+SET Sep 9
+SET Oct 10
+SET Nov 11
+SET Dec 12
+
+SET January   1
+SET February  2
+SET March     3
+SET April     4
+SET May       5
+SET June      6
+SET July      7
+SET August    8
+SET September 9
+SET October   10
+SET November  11
+SET December  12
+# Shorthand for commonly used expression...
+FSET _trig()        TRIGGER(TRIGDATE())
+
+# Handy function to provide SCANFROM dates...
+FSET _back(days)    TRIGGER(TODAY()-days)
+    SET SaveTrig $NumTrig
+SET easter EASTERDATE(YEAR(TODAY()))
+    REM  [TRIGGER(easter-46)] MSG %"Ash Wednesday%"
+    REM  [TRIGGER(easter-7)]  MSG %"Palm Sunday%"
+    OMIT [TRIGGER(easter-2)]  MSG %"Good Friday%"
+    OMIT [TRIGGER(easter)]    MSG %"Easter%" Sunday
+    REM  [TRIGGER(easter+39)] MSG %"Ascension Day%"
+    REM  [TRIGGER(easter+49)] MSG %"Pentecost%"
+
+# Some holidays are omitted, some are not.  You may want to change
+# which ones are omitted - use the general forms shown below.
+# You'll need the _back() function and the Week_n variables defined
+# way up in the file.
+
+    OMIT     Jan  1     MSG %"New Year's%" Day
+    REM  Mon Jan [Week_3]   MSG Martin Luther King - %"MLK Day%"
+    REM      Feb  2     MSG %"Ground Hog Day%"
+    REM      Feb 14     MSG %"Valentine's%" Day
+    REM  Mon Feb [Week_3]   SCANFROM [_back(7)] SATISFY 1
+    OMIT [_trig()] MSG %"President's Day%"
+    REM      Mar 17     MSG %"St. Patrick's%" Day
+    REM  Sun Apr  1 ++2 MSG Daylight Savings Time - %"DST starts%" %b
+    REM      Apr  1     MSG %"April Fool's%" Day
+    REM  Mon Tue Wed Thu Fri Sat 15 Apr MSG %"Income tax%" due
+    REM      May  5     MSG %"Cinco de Mayo%"
+    REM  Sat May [Week_1]   MSG %"Kentucky Derby%"
+    REM  Sun May [Week_2]   MSG %"Mother's Day%"
+    REM  Sat May [Week_3]   MSG %"Armed Forces Day%"
+    REM  Mon [_last(May)]   SCANFROM [_back(7)] SATISFY 1
+    OMIT [_trig()] MSG %"Memorial Day%"
+    REM      Jun 14     MSG %"Flag Day%"
+    REM  Sun Jun [Week_3]   MSG %"Father's Day%"
+    REM  Mon Sep [Week_1]   SCANFROM [_back(7)] SATISFY 1
+    OMIT [_trig()] MSG %"Labor Day%"
+    REM  Mon Oct [Week_2]   MSG %"Columbus Day%"
+    REM      Nov 11     MSG %"Veterans Day%"
+    REM  Sun [_last(Oct)]   MSG Daylight Savings Time - %"DST over%"
+    REM      Oct 30     MSG %"Mischief Night%"
+    REM      Oct 31     MSG %"Halloween%"
+    REM  Tue Nov  2     SCANFROM [_back(7)] \
+        SATISFY [(YEAR(TRIGDATE()) % 4) == 0] \
+        MSG %"Election%" Day
+        REM  Thu Nov [Week_4]   SCANFROM [_back(7)] SATISFY 1
+        OMIT [_trig()] MSG %"Thanksgiving%" Day
+        REM  Fri Nov [Week_4+1] SCANFROM [_back(7)] SATISFY 1
+        OMIT [_trig()] MSG %"Thanksgiving%" (cont.)
+        OMIT     Dec 24     MSG %"Christmas Eve%"
+        OMIT     Dec 25     MSG %"Christmas%" Day
+
