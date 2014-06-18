@@ -1,12 +1,12 @@
-source ~/dots/bash/scripts/git-prompt.sh
-source ~/dots/bash/colors
+source ~/dotfiles/bash/scripts/git-prompt.sh
+source ~/dotfiles/bash/colors
 export TZ='America/Toronto'
 export EDITOR='vim'
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 function set_ps1()
 {
-    export PS1="\[$Red\]<\[$Blue\]\[$PWD/\]\[$Red\]> \[$(__git_ps1)\] \n——> "
+    export PS1="\[$Red\]<\[$Blue\]\[$PWD/\]\[$Red\]> \[$(__git_ps1)\] \n——>\[$Color_Off\] "
 }
 function pastebin()
 {
