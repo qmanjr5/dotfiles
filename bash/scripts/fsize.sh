@@ -1,1 +1,1 @@
-printf '\33]50;%s%d\007' "xft:inconsolata:pixelsize=" $1
+printf '\33]50;%s%d\007' "xft:DejaVu Sans Mono:size=" $1
