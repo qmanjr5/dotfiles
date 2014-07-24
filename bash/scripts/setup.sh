@@ -1,5 +1,7 @@
 #Dotfiles startup script
 
+#Symlink the bashrc in this dir to ~/.bashrc
+ln -s ~/dotfiles/bash/bashrc ~/.bashrc
 #Symlink .sh_history, .bash_history, and .mysql_history to /dev/null
 #This prevents passwords being written to these files (and other information you may not want there)
 #It also still allows command scrollback for the current bash session
