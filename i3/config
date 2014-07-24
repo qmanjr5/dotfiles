@@ -15,9 +15,9 @@ for_window [class="message"] floating enable
 #Border = Title bar
 #Background = outline
 #class                      Border   backgr.text    indicator
-client.focused              #262626 #B82121 #000    #B82121
-client.focused_inactive     #262626 #F3E7c6 #000    #B82121
-client.unfocused            #F3E7c6 #F3E7c6 #000    #000
+client.focused              #fff #fff #FFFFFF    #B82121
+client.focused_inactive     #000 #000 #000    #B82121
+client.unfocused            #000 #000 #FFFFFF    #000
 client.urgent              #000    #000    #000    #000
 rename workspace 11 to |│|
 rename workspace 1 to 0001
@@ -64,11 +64,11 @@ bar {
         position bottom
         colors
         {
-                background #F3E7c6
+                background #000
                 #Colorclass             border  background  text
-                focused_workspace       #906861 #906861    #000
-                active_workspace        #F3E7c6 #F3E7c6    #000
-                inactive_workspace      #F3E7c6 #F3E7c6    #000
+                focused_workspace       #906861 #000    #FFFFFF
+                active_workspace        #000 #000    #FFFFFF
+                inactive_workspace      #000 #000    #FFFFFF
         }
 }
 set $mod Mod4
