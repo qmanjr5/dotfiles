@@ -1,26 +1,25 @@
-*.transparent:false
-*.shading: 20
-*.depth: 32
-*.scrollBar: false
+urxvt.transparent:false
+urxvt.shading: 20
+urxvt.depth: 32
+urxvt.scrollBar: false
 *.font: xft:DejaVu Sans Mono:size=11
-*.background: #282828
 *.foreground:  #e0f0f7 
-*.cursorColor: #e0f0f7
-*.background: #000
- *.color0:   #2a2e31
- *.color8:   #363a3c
- *.color1:   #ad3737
- *.color9:   #ff6b6b
- *.color2:   #82a632
- *.color10: #c7f464
- *.color3:   #a6a132
- *.color11: #f4ee64
- *.color4:   #3c4e62
- *.color12: #55687c
- *.color5:   #86263f
- *.color13: #c44d6c
- *.color6:   #268c85
- *.color14: #4ecdc4
- *.color7:   #acbeca
- *.color15: #e0f0f7
+urxvt.cursorColor: #e0f0f7
+*.background: #060912
+*.color0:   #2a2e31
+*.color8:   #363a3c
+*.color1:   #ad3737
+*.color9:   #ff6b6b
+*.color2:   #82a632
+*.color10: #c7f464
+*.color3:   #a6a132
+*.color11: #f4ee64
+*.color4:   #3c4e62
+*.color12: #55687c
+*.color5:   #86263f
+*.color13: #c44d6c
+*.color6:   #268c85
+*.color14: #4ecdc4
+*.color7:   #acbeca
+*.color15: #e0f0f7
 

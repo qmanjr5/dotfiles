@@ -6,7 +6,7 @@ GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 function set_ps1()
 {
-    export PS1="\[$IRed\]\u@\h\[$IBlue\] $PWD/ \[$IRed\]\[$(__git_ps1)\] \n——>\[$Color_Off\] "
+    export PS1="$IRed\u@\h$Cyan $PWD/ $IRed $(__git_ps1) \n> $Color_Off"
 }
 function pastebin()
 {
@@ -16,16 +16,13 @@ function pastebin()
 
 PROMPT_COMMAND=set_ps1
 
+alias lock="i3lock -c '000000'"
+alias font-size="~/dotfiles/bash/scripts/fsize.sh"
+alias todo="~/todo/todo.sh"
 alias echo="echo -ne"
 alias flux="xflux -l 42.3333 -g -83.0333"
 alias scrot="~/dots/bash/scripts/scrot.sh"
-alias cls="clear"
-alias copy="xclip -i"
-alias paste="xclip -o"
-alias irssi="screen -R irssi irssi"
 alias ls='ls -h --color=no --file-type '
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias thetime='date +"It is %r on %A, %B %e"'
 alias whoami='echo "You are" $USER "\n"'
 alias whatshell='echo "You are using" $SHELL'

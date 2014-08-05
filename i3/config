@@ -10,6 +10,12 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 ####Additives######
+exec xbindkeys
+exec clipit
+exec ~/dotfiles/bash/scripts/input-setup.sh 
+exec ~/dotfiles/bash/scripts/wallpaper.sh
+exec deluge-web
+
 for_window [class="message"] floating enable
 #colors!
 #Border = Title bar
@@ -61,10 +67,11 @@ bindsym $mod+Shift+parenright move workspace 1010
 new_window 1pixel
 
 bar {
+        status_command i3status
         position bottom
         colors
         {
-                background #000
+                background #060912
                 #Colorclass             border  background  text
                 focused_workspace       #906861 #000    #FFFFFF
                 active_workspace        #000 #000    #FFFFFF
