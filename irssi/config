@@ -269,11 +269,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "Unknown";
-    user_name = "quentin/bouncer.evan.pro";
-    nick = "kairos";
-  };
+  core = { real_name = "Unknown"; user_name = "kairos"; nick = "kairos"; };
   "fe-text" = { actlist_sort = "refnum"; actlist_names = "no"; };
   "perl/core/scripts" = {
     awl_display_key = "<$Q|$H$C$S>";

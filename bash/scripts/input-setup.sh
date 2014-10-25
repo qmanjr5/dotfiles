@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-synclient TapButton1=3
-synclient TapButton2=1
+synclient TapButton1=1
+synclient TapButton2=3
 
-xmodmap -e "pointer = 3 2 1"
+xmodmap -e "pointer = 1 2 3"

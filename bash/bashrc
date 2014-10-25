@@ -15,7 +15,9 @@ function pastebin()
 
 
 PROMPT_COMMAND=set_ps1
-
+alias plex="midori -a dantooine/web &"
+alias netflix="midori -a netflix.com &"
+alias clock="xdaliclock -bd '#060912'"
 alias lock="i3lock -c '000000'"
 alias font-size="~/dotfiles/bash/scripts/fsize.sh"
 alias todo="~/todo/todo.sh"
@@ -26,3 +28,8 @@ alias ls='ls -h --color=no --file-type '
 alias thetime='date +"It is %r on %A, %B %e"'
 alias whoami='echo "You are" $USER "\n"'
 alias whatshell='echo "You are using" $SHELL'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+PERL_MB_OPT="--install_base \"/home/kairos/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/kairos/perl5"; export PERL_MM_OPT;

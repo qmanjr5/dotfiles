@@ -10,6 +10,8 @@ do
     if [ -f $i ];
     then
         rm -f $i;
+	echo "Removed $i";
     fi
     ln -s /dev/null $i
+    echo "Linked $i";
 done
