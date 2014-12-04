@@ -15,6 +15,7 @@ function pastebin()
 
 
 PROMPT_COMMAND=set_ps1
+alias calculate="bc -l <<< $@"
 alias plex="midori -a dantooine/web &"
 alias netflix="midori -a netflix.com &"
 alias clock="xdaliclock -bd '#060912'"
@@ -22,7 +23,7 @@ alias lock="i3lock -c '000000'"
 alias font-size="~/dotfiles/bash/scripts/fsize.sh"
 alias todo="~/todo/todo.sh"
 alias echo="echo -ne"
-alias flux="xflux -l 42.3333 -g -83.0333"
+alias flux="~/xflux -l 42.3333 -g -83.0333"
 alias scrot="~/dots/bash/scripts/scrot.sh"
 alias ls='ls -h --color=no --file-type '
 alias thetime='date +"It is %r on %A, %B %e"'

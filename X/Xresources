@@ -1,8 +1,10 @@
+URxvt.urgentOnBell: True
+
 urxvt.transparent:false
 urxvt.shading: 20
 urxvt.depth: 32
 urxvt.scrollBar: false
-*.font: xft:DejaVu Sans Mono:size=11
+*.font: xft:DejaVu Sans Mono:size=9
 *.foreground:  #e0f0f7 
 urxvt.cursorColor: #e0f0f7
 *.background: #060912

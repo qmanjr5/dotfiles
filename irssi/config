@@ -280,6 +280,8 @@ settings = {
     neat_maxlength = "15";
     awl_display_key_active = "%G<$Q|$H$C$S>%n";
     awl_hide_empty = "0";
+    beep_cmd = "play ~/notif.wav > /dev/null 2>&1";
+    beep_command = " play ~/notif.wav &";
   };
   "fe-common/core" = {
     theme = "kairos";
@@ -288,6 +290,9 @@ settings = {
     window_default_level = "publics notices snotes ctcps actions modes topics wallops nicks joins parts quits";
     activity_hide_targets = "#defocus &bitlbee &facebook";
     activity_msg_level = "";
+    beep_msg_level = "MSGS HILIGHT";
+    bell_beeps = "yes";
+    beep_when_window_active = "no";
   };
 };
 logs = { };
